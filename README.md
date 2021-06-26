@@ -52,7 +52,7 @@ O envio para rota é um JSON contendo a lista de emails.
 
 ### POST - Rota /send
 
-Pelo navegador, basta acessar a URL fornecida pelo comando 'php artisan serve'. A interface lista os dados existentes resgatados da API, e também permite a exclusão e a insersão de novos dados.
+Pelo aplicativo de requisições, basta acessar a URL e enviar a requisição pela rota http://127.0.0.1:8000/send.
 
 ![](/screenshots/rota-send.png?raw=true "POST - Send")
 
