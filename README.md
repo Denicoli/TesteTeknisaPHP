@@ -57,3 +57,4 @@ Pelo aplicativo de requisições, basta acessar a URL e enviar a requisição pe
 ![](/screenshots/rota-send.png?raw=true "POST - Send")
 
 ## Autor
+|  [Tiago Denicoli](https://github.com/Denicoli/)   |
