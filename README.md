@@ -1,24 +1,59 @@
-# Lumen PHP Framework
+# Teste Técnico - Teknisa
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+## API Lumen desenvolvida para simular envio de emails utilizando a rota POST.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+### Features
 
-## Official Documentation
+- [x] Rota que recebe uma lista de emails, faz a validação e os inclui em um arquivo de texto.
+- [x] Rota que simula o envio dos emails, gerando arquivos log para os arquivos enviados e não enviados.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## Instalando a API
 
-## Contributing
+### API
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+A API foi desenvolvida utilizando a micro framework [Lumen](https://lumen.laravel.com/), e usa a biblioteca [Monolog](https://github.com/Seldaek/monolog) para gerar arquivos log.
 
-## Security Vulnerabilities
+* Para baixar o projeto siga as instruções abaixo:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+1. git clone https://github.com/Denicoli/TesteTeknisaPHP
+2. cd TesteTeknisaPHP
 
-## License
+```
+* A API necessita que o [Composer](https://getcomposer.org/) esteja instalado na máquina.
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Renomeie o arquivo `.env.example` para `.env`.
+
+
+* Observação:
+
+Os logs gerados encontram-se no diretório `/storage/logs`.
+
+## Iniciando a API
+
+* Basta executar o comando:
+
+```
+php -S localhost:8000 -t public
+
+```
+
+Pronto! A aplicação já está rodando e já podem ser feitas as requisições.
+
+## Requisições
+
+### POST - Rota /add
+
+Utilizando um aplicativo para realizar requisições, como o [Insomnia](https://insomnia.rest/), basta acessar a URL  http://127.0.0.1:8000 seguido de '/add'. (Ex: http://127.0.0.1:8000/add).
+
+O envio para rota é um JSON contendo a lista de emails.
+
+![](/screenshots/rota-add.png?raw=true "POST - Add")
+
+### POST - Rota /send
+
+Pelo navegador, basta acessar a URL fornecida pelo comando 'php artisan serve'. A interface lista os dados existentes resgatados da API, e também permite a exclusão e a insersão de novos dados.
+
+![](/screenshots/rota-send.png?raw=true "POST - Send")
+
+## Autor
